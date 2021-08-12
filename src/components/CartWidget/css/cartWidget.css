@@ -1,0 +1,18 @@
+.cartWidget {
+  background-color: #fec5bb;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  justify-content: space-between;
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
+  width: 9rem;
+}
+.cartWidget__logo {
+  width: 100%;
+}
+.cartWidget__text {
+  color: #03045e;
+  text-align: center;
+}

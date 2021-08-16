@@ -3,3 +3,11 @@
   margin: 0;
   padding: 0;
 }
+
+.main {
+  background-color: #ddbea9;
+  width: 100%;
+}
+.main__title {
+  text-align: center;
+}

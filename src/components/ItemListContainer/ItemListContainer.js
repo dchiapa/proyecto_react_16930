@@ -1,14 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { pedirDatos } from "../../helpers/pedirDatos";
+import { getData } from "../../helpers/getData";
 import { ItemList } from "./ItemList";
-import "./css/ItemListContainer.css";
 
 export const ItemListContainer = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    pedirDatos()
+    getData()
       .then((productsList) => {
         setData(productsList);
       })

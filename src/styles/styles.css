@@ -9,6 +9,8 @@
   background-color: #ddbea9;
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 144px - 50px);
+  padding-bottom: 1rem;
   width: 100%;
 }
 .main__title {

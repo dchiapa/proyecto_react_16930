@@ -1,0 +1,30 @@
+.itemDetail {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 1rem;
+  width: 50%;
+}
+.itemDetail__title {
+  text-align: center;
+  width: 100%;
+}
+.itemDetail__data {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-evenly;
+  margin: 0 1rem;
+  width: 60%;
+}
+.itemDetail__link {
+  background-color: lightcoral;
+  border-radius: 20px;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 10px;
+  width: 30%;
+}

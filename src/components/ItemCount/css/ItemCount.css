@@ -1,0 +1,19 @@
+.count__Minus,
+.count__Plus {
+  background-color: indianred;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+.count__Minus {
+  margin-right: 1rem;
+}
+.count__Plus {
+  margin-left: 1rem;
+}
+.count__counter {
+  text-align: center;
+  width: 2rem;
+}

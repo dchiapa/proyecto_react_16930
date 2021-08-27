@@ -1,19 +1,28 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getData } from "../../helpers/getData";
 import { ItemList } from "./ItemList";
 
 export const ItemListContainer = () => {
+  const { cat } = useParams();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     getData()
       .then((productsList) => {
-        setData(productsList);
+        if (cat) {
+          const filteredProducts = productsList.filter(
+            (product) => product.category === cat
+          );
+          setData(filteredProducts);
+        } else {
+          setData(productsList);
+        }
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [cat]);
   return (
     <main className="main">
       {loading ? (

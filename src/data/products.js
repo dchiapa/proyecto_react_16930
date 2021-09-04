@@ -21,7 +21,7 @@ export const products = [
   },
   {
     id: 3,
-    category: "remera",
+    category: "remeras",
     name: "Remera 1",
     price: 2000,
     description:
@@ -31,7 +31,7 @@ export const products = [
   },
   {
     id: 4,
-    category: "remera",
+    category: "remeras",
     name: "Remera 2",
     price: 1700,
     description:
@@ -41,7 +41,7 @@ export const products = [
   },
   {
     id: 5,
-    category: "pantalon",
+    category: "pantalones",
     name: "Pantalón 1",
     price: 4000,
     description:
@@ -51,7 +51,7 @@ export const products = [
   },
   {
     id: 6,
-    category: "pantalon",
+    category: "pantalones",
     name: "Pantalón 2",
     price: 4200,
     description:

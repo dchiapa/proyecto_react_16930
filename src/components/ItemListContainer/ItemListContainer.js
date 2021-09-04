@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
   return (
     <main className="main">
       {loading ? (
-        <h1 className="main__title">cargando...</h1>
+        <div className="spinner"></div>
       ) : (
         <Fragment>
           <h1 className="main__title">Productos</h1>

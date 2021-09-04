@@ -22,11 +22,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <main className="main">
-      {loading ? (
-        <h2 className="main__title">Loading...</h2>
-      ) : (
-        <ItemDetail {...product} />
-      )}
+      {loading ? <div className="spinner"></div> : <ItemDetail {...product} />}
     </main>
   );
 };

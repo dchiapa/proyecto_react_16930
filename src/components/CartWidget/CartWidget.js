@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import "./css/cartWidget.css";
-export const CartWidget = (props) => {
+import carrito from "./img/cart__icon.png";
+
+export const CartWidget = () => {
+  const { cartQuantity } = useContext(CartContext);
+
   return (
-    <div className="cartWidget">
+    <Link to="/carrito" className="cartWidget">
       <img
         className="cartWidget__logo"
-        src={require("./img/cart__icon.png")}
+        src={carrito}
         alt="carrito de compras"
       />
-      <span className="cartWidget__text">Carrito</span>
-    </div>
+      <span className="cartWidget__text">{cartQuantity}</span>
+    </Link>
   );
 };

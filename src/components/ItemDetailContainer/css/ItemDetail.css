@@ -22,9 +22,10 @@
 .itemDetail__link {
   background-color: lightcoral;
   border-radius: 20px;
+  border: none;
   color: inherit;
   text-align: center;
   text-decoration: none;
   padding: 5px 10px;
-  width: 30%;
+  width: 50%;
 }

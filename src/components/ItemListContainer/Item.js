@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Item.css";
 
-export const Item = ({ img, name, description, price, id }) => {
+export const Item = ({ img, name, price, id }) => {
   return (
     <article className="item">
       <img className="item__img" src={img} alt={name} />

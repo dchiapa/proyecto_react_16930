@@ -1,4 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
+import { UIContext } from "../../context/UIContext";
 import { useParams } from "react-router-dom";
 import { getData } from "../../helpers/getData";
 import { ItemList } from "./ItemList";
@@ -6,7 +7,8 @@ import { ItemList } from "./ItemList";
 export const ItemListContainer = () => {
   const { cat } = useParams();
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const { loading, setLoading } = useContext(UIContext);
+
   useEffect(() => {
     setLoading(true);
     getData()
@@ -22,7 +24,7 @@ export const ItemListContainer = () => {
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, [cat]);
+  }, [cat, setLoading]);
   return (
     <main className="main">
       {loading ? (

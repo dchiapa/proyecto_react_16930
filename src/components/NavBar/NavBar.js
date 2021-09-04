@@ -31,16 +31,6 @@ export const NavBar = () => {
             Zapatillas
           </Link>
         </li>
-        <li className="navbar__item">
-          <Link to="/nosotros" className="navbar__link">
-            Nosotros
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <Link to="/carrito" className="navbar__link">
-            Carrito
-          </Link>
-        </li>
       </ul>
     </nav>
   );

@@ -1,8 +1,8 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import { UIContext } from "../../context/UIContext";
 import { useParams } from "react-router-dom";
-import { getData } from "../../helpers/getData";
 import { ItemList } from "./ItemList";
+import { getFirestore } from "../../firebase/config";
 
 export const ItemListContainer = () => {
   const { cat } = useParams();
@@ -10,21 +10,35 @@ export const ItemListContainer = () => {
   const { loading, setLoading } = useContext(UIContext);
 
   useEffect(() => {
+    const db = getFirestore();
+    const products = db.collection("productos");
     setLoading(true);
-    getData()
-      .then((productsList) => {
-        if (cat) {
-          const filteredProducts = productsList.filter(
-            (product) => product.category === cat
-          );
-          setData(filteredProducts);
-        } else {
-          setData(productsList);
-        }
-      })
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+    if (cat) {
+      const productsFiltered = products.where("category", "==", cat);
+      productsFiltered
+        .get()
+        .then((res) => {
+          const data = res.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setData(data);
+        })
+        .finally(() => setLoading(false));
+    } else {
+      products
+        .get()
+        .then((res) => {
+          const data = res.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setData(data);
+        })
+        .finally(() => setLoading(false));
+    }
   }, [cat, setLoading]);
+
   return (
     <main className="main">
       {loading ? (

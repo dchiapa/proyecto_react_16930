@@ -13,8 +13,10 @@
   text-decoration: none;
 }
 .navbar__brand {
-  display: inline;
+  align-items: center;
+  display: flex;
   margin-left: 2rem;
+  min-height: 4rem;
 }
 .navbar__brand:hover {
   font-weight: bolder;

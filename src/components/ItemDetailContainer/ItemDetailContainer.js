@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { UIContext } from "../../context/UIContext";
-import { getData } from "../../helpers/getData";
+import { getFirestore } from "../../firebase/config";
 import { ItemDetail } from "./ItemDetail";
 
 export const ItemDetailContainer = () => {
@@ -10,14 +10,16 @@ export const ItemDetailContainer = () => {
   const { loading, setLoading } = useContext(UIContext);
 
   useEffect(() => {
+    const db = getFirestore();
+    const productsCollection = db.collection("productos");
+    const product = productsCollection.doc(productId);
     setLoading(true);
-    getData()
-      .then((data) => {
-        setProduct(data.find((prod) => prod.id === parseInt(productId, 10)));
+    product
+      .get()
+      .then((doc) => {
+        setProduct({ ...doc.data(), id: doc.id });
       })
-      .finally(() => {
-        setLoading(false);
-      });
+      .finally(() => setLoading(false));
   }, [productId, setLoading]);
 
   return (

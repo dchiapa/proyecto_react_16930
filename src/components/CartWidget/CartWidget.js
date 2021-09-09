@@ -8,13 +8,17 @@ export const CartWidget = () => {
   const { cartQuantity } = useContext(CartContext);
 
   return (
-    <Link to="/carrito" className="cartWidget">
-      <img
-        className="cartWidget__logo"
-        src={carrito}
-        alt="carrito de compras"
-      />
-      <span className="cartWidget__text">{cartQuantity}</span>
-    </Link>
+    <div className="cart-widget">
+      {cartQuantity > 0 && (
+        <Link to="/carrito" className="cartWidget">
+          <img
+            className="cartWidget__logo"
+            src={carrito}
+            alt="carrito de compras"
+          />
+          <span className="cartWidget__text">{cartQuantity}</span>
+        </Link>
+      )}
+    </div>
   );
 };

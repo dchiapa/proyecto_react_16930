@@ -8,6 +8,7 @@ import { CartProvider } from "./context/CartContext";
 import { UIProvider } from "./context/UIContext";
 import "./styles/styles.css";
 import { CartScreen } from "./components/CartScreen/CartScreen";
+import { Checkout } from "./components/Checkout/Checkout";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
               </Route>
               <Route excat path="/carrito">
                 <CartScreen />
+              </Route>
+              <Route excat path="/checkout">
+                <Checkout />
               </Route>
               <Route path="*">
                 <Redirect to="/" />

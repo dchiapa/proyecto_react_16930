@@ -7,7 +7,7 @@ export const NavBar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar__brand">
-        TuTienda
+        PescaNuestra
       </Link>
       <CartWidget />
       <ul className="navbar__nav">

@@ -17,18 +17,18 @@ export const NavBar = () => {
           </Link>
         </li>
         <li className="navbar__item">
-          <Link to="/category/pantalones" className="navbar__link">
-            Pantalones
+          <Link to="/category/reel" className="navbar__link">
+            Reeles
           </Link>
         </li>
         <li className="navbar__item">
-          <Link to="/category/remeras" className="navbar__link">
-            Remeras
+          <Link to="/category/caña" className="navbar__link">
+            Cañas
           </Link>
         </li>
         <li className="navbar__item">
-          <Link to="/category/calzado" className="navbar__link">
-            Zapatillas
+          <Link to="/category/combo" className="navbar__link">
+            Combos
           </Link>
         </li>
       </ul>

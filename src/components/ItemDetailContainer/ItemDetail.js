@@ -22,7 +22,9 @@ export const ItemDetail = ({
   return (
     <article className="item itemDetail">
       <h2 className="itemDetail__title">{name}</h2>
-      <img className="itemDetail__img" src={img} alt={name} />
+      <div className="itemDetail__img-container">
+        <img className="itemDetail__img" src={img} alt={name} />
+      </div>
       <section className="itemDetail__data">
         <p className="itemDetail__text">Categoría: {category}</p>
         <p className="itemDetail__description">{description}</p>

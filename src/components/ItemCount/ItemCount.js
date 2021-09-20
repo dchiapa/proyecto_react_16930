@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./css/ItemCount.css";
 
-export const ItemCount = ({ stock, count, setCount, addToCart, added }) => {
+export const ItemCount = ({ stock, count, setCount }) => {
   const countMinus = () => {
     count > 0 && setCount(count - 1);
   };
@@ -15,23 +15,22 @@ export const ItemCount = ({ stock, count, setCount, addToCart, added }) => {
   return (
     <Fragment>
       {
-        <div>
-          <button className="count__Minus" onClick={countMinus}>
-            -
-          </button>
-          <input
-            className="count__counter"
-            type="text"
-            disabled
-            value={count}
-          />
-          <button className="count__Plus" onClick={countPlus}>
-            +
-          </button>
-          <button className="count__button" onClick={addToCart}>
-            {added ? "Actualizar al carrito" : "Agregar al carrito"}
-          </button>
-        </div>
+        <>
+          <div className="counter">
+            <button className="btn btn__counter" onClick={countMinus}>
+              -
+            </button>
+            <input
+              className="count__counter"
+              type="text"
+              disabled
+              value={count}
+            />
+            <button className="btn  btn__counter" onClick={countPlus}>
+              +
+            </button>
+          </div>
+        </>
       }
     </Fragment>
   );

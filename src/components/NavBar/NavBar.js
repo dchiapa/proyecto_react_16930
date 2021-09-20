@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 import "./css/NavBar.css";
 
+import img from "./img/logo2.png";
+
 export const NavBar = () => {
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar__brand">
-        PescaNuestra
-      </Link>
-      <CartWidget />
+      <div className="navbar__head">
+        <Link to="/" className="navbar__brand">
+          <img src={img} className="navbar__img" alt="logo NuestraPesca" />
+        </Link>
+        <CartWidget />
+      </div>
       <ul className="navbar__nav">
         <li className="navbar__item">
           <Link to="/" className="navbar__link">

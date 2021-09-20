@@ -8,11 +8,7 @@ export const CartProvider = ({ children }) => {
   const addToCart = (prod) => {
     if (prod.count > 0) {
       if (isInCart(prod.id)) {
-        const newProd = cart.filter((item) => item.id === prod.id)[0];
         const oldCart = cart.filter((item) => item.id !== prod.id);
-        console.log("elemento original", newProd);
-        console.log("carrito", oldCart);
-        console.log("CANTIDAD", prod.count);
         setCart([...oldCart, prod]);
       } else setCart([...cart, prod]);
     } else removeFromCart(prod.id);

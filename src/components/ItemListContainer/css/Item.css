@@ -1,9 +1,10 @@
 .item {
   align-items: center;
-  background-color: rgb(221, 221, 221);
-  border-radius: 4px;
+  background-color: #fef596;
+  border-radius: 10px;
   box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   padding-bottom: 10px;
 }
@@ -23,7 +24,7 @@
   margin: 0.5rem;
 }
 .item__btn {
-  background-color: lightcoral;
+  background-color: #dbb143;
   border-radius: 20px;
   color: inherit;
   text-align: center;

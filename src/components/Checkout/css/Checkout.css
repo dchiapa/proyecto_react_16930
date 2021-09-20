@@ -1,0 +1,25 @@
+.checkout {
+  align-items: center;
+  background-color: #fef596;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50vh;
+  width: 50%;
+}
+.checkout label,
+.checkout input {
+  width: 40%;
+}
+
+.checkout input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.5rem;
+}
+
+.checkout input:focus {
+  border: 1px solid #ccc;
+  outline: none;
+}

@@ -1,32 +1,22 @@
-.count__Minus,
-.count__Plus {
-  background-color: indianred;
-  border: none;
-  border-radius: 50%;
-  color: white;
-  height: 20px;
-  width: 20px;
+.counter {
+  margin: 1rem 0;
 }
-.count__Minus {
-  margin-right: 1rem;
-}
-.count__Plus {
-  margin-left: 1rem;
-}
+
 .count__counter {
+  height: 2rem;
+  margin: 0 0.5rem;
   text-align: center;
-  width: 2rem;
+  width: 2.5rem;
 }
-.count__button {
-  background-color: lightcoral;
-  border-radius: 20px;
-  border: none;
-  color: inherit;
+
+.btn__counter {
+  color: white !important;
+  height: 2rem;
+  padding: 0 !important;
   text-align: center;
-  text-decoration: none;
-  padding: 5px 10px;
-  width: 50%;
+  width: 2rem !important;
 }
-.count__button:hover {
-  cursor: pointer;
+
+.counter__link {
+  height: 2rem;
 }

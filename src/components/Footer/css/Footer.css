@@ -1,7 +1,11 @@
 footer {
   align-items: center;
-  background-color: lightgrey;
+  background-color: #2a7c3a;
+  color: #fff;
   display: flex;
   height: 50px;
   justify-content: center;
+}
+footer a {
+  color: #fff;
 }

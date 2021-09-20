@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { newOrder } from "../../firebase/newOrder";
+import "./css/Checkout.css";
 
 export const Checkout = () => {
   const { cart, cartTotal, clearCart } = useContext(CartContext);
@@ -8,7 +9,7 @@ export const Checkout = () => {
   const [buyer, setBuyer] = useState({
     name: "",
     email: "",
-    phone: 0,
+    phone: "",
   });
 
   const handleInputChange = (e) => {
@@ -34,12 +35,12 @@ export const Checkout = () => {
 
   return (
     <main className="main">
-      <h2>Checkout</h2>
+      <h1 className="main__title">Checkout</h1>
       {!cart.length ? (
         <h3>El carrito esta vacio.</h3>
       ) : (
-        <div>
-          <form onSubmit={handleSubmit}>
+        <>
+          <form className="checkout" onSubmit={handleSubmit}>
             <label htmlFor="name">Nombre:</label>
             <input
               type="text"
@@ -64,9 +65,11 @@ export const Checkout = () => {
               name="phone"
               required
             />
-            <button type="submit">Submit</button>
+            <button className="btn" type="submit">
+              Submit
+            </button>
           </form>
-        </div>
+        </>
       )}
     </main>
   );

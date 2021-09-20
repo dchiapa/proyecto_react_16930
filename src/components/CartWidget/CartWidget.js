@@ -8,7 +8,7 @@ export const CartWidget = () => {
   const { cartQuantity } = useContext(CartContext);
 
   return (
-    <div className="cart-widget">
+    <>
       {cartQuantity > 0 && (
         <Link to="/carrito" className="cartWidget">
           <img
@@ -19,6 +19,6 @@ export const CartWidget = () => {
           <span className="cartWidget__text">{cartQuantity}</span>
         </Link>
       )}
-    </div>
+    </>
   );
 };

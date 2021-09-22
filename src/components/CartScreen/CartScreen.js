@@ -20,9 +20,9 @@ export const CartScreen = () => {
           <table>
             <thead>
               <tr>
-                <th>Producto</th>
+                <th>Prod</th>
                 <th>Precio</th>
-                <th>Cantidad</th>
+                <th>Cant</th>
                 <th>Total</th>
                 <th>Eliminar</th>
               </tr>
@@ -36,7 +36,7 @@ export const CartScreen = () => {
                   <td>${prod.count * prod.price}</td>
                   <td>
                     <button
-                      className="btn"
+                      className="btn cart__btn"
                       onClick={() => removeFromCart(prod.id)}
                     >
                       Eliminar

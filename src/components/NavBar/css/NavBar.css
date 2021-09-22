@@ -8,9 +8,9 @@
 }
 .navbar__head {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 1rem 0;
+  margin: 1rem;
   width: 100%;
 }
 .navbar a {
@@ -19,7 +19,7 @@
 }
 .navbar__brand {
   display: flex;
-  margin-left: 1rem;
+  margin: 1rem auto;
 }
 .navbar__img {
   height: 100px;
@@ -57,4 +57,13 @@
   color: white;
   cursor: pointer;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .navbar__head {
+    flex-direction: row;
+  }
+  .navbar__brand {
+    margin: 0;
+    margin-left: 1rem;
+  }
 }

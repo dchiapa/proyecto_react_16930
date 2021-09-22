@@ -66,7 +66,7 @@ export const Checkout = () => {
               required
             />
             <button className="btn" type="submit">
-              Submit
+              Enviar
             </button>
           </form>
         </>

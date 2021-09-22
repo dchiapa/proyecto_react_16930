@@ -6,11 +6,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 50vh;
-  width: 50%;
+  width: 80%;
 }
 .checkout label,
 .checkout input {
-  width: 40%;
+  width: 90%;
 }
 
 .checkout input {
@@ -22,4 +22,13 @@
 .checkout input:focus {
   border: 1px solid #ccc;
   outline: none;
+}
+@media screen and (min-width: 768px) {
+  .checkout {
+    width: 50%;
+  }
+  .checkout label,
+  .checkout input {
+    width: 40%;
+  }
 }

@@ -2,6 +2,8 @@
 
 PescaNuestra la tienda dedicada a los pescadores. Proyecto del curso React JS de Coderhouse, camada 16930.
 
+- Se puede probar y utilizar en: https://tienda.diegochiapa.com.ar/
+
 ## Videos de uso:
 
 Los videos no se abren en una ventana nueva,

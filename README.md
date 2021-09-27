@@ -2,6 +2,15 @@
 
 PescaNuestra la tienda dedicada a los pescadores. Proyecto del curso React JS de Coderhouse, camada 16930.
 
+## Videos de uso:
+
+Los videos no se abren en una ventana nueva,
+para hacerlo debe dar click derecho y seleccionar la opción correspondiente
+
+- Primer parte: <a href="https://tienda.diegochiapa.com.ar/videos/video1.mp4">link</a>
+
+- Segunda parte: <a href="https://tienda.diegochiapa.com.ar/videos/video2.mp4">link</a>
+
 ---
 
 ### Pre-requisitos 📋
